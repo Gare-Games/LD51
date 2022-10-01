@@ -9,6 +9,8 @@ public class PlayerShipMovementController : MonoBehaviour
 	bool bMoveUpStarted = false;
 	bool bMoveUpEnded = false;
 	bool bMoveDown = false;
+	bool bMoveBackwards = false;
+	bool bMoveForwards = false;
 	bool bMoveLeft = false;
 	bool bMoveRight = false;
 
@@ -53,7 +55,14 @@ public class PlayerShipMovementController : MonoBehaviour
 	{
 		moveUpWarmupTimer.Interval();
 		moveUpCooldownTimer.Interval();
-		CollectInput();
+		moveDownWarmupTimer.Interval();
+		moveDownCooldownTimer.Interval();
+		forwardsWarmupTimer.Interval();
+		forwardsCooldownTimer.Interval();
+		backwardsWarmupTimer.Interval();
+		backwardsCooldownTimer.Interval();
+
+	CollectInput();
 
 		DoAction();
 	}
@@ -64,6 +73,8 @@ public class PlayerShipMovementController : MonoBehaviour
 
 		m_rigidbody2D.velocity += UpwardVelocity();
 		m_rigidbody2D.velocity += DownwardVelocity();
+		m_rigidbody2D.velocity += BackwardsVelocity();
+		m_rigidbody2D.velocity += ForwardsVelocity();
 	}
 
 	public Vector2 UpwardVelocity()
@@ -108,6 +119,48 @@ public class PlayerShipMovementController : MonoBehaviour
 		return Vector2.zero;
 	}
 
+	public Vector2 BackwardsVelocity()
+	{
+		if (bMoveBackwards)
+		{
+			if (!backwardsWarmupTimer.IsFinished() && backwardsWarmupTimer.HasStarted())
+			{
+				return Vector2.left * backwardsSpeed;
+			}
+			else if (backwardsWarmupTimer.IsFinished())
+			{
+				return Vector2.left * backwardsSpeed;
+			}
+		}
+		if (!backwardsCooldownTimer.IsFinished() && backwardsCooldownTimer.HasStarted())
+		{
+			return Vector2.left * backwardsWarmUpSpeed;
+		}
+
+		return Vector2.zero;
+	}
+
+	public Vector2 ForwardsVelocity()
+	{
+		if (bMoveForwards)
+		{
+			if (!forwardsWarmupTimer.IsFinished() && forwardsWarmupTimer.HasStarted())
+			{
+				return Vector2.right * forwardsSpeed;
+			}
+			else if (forwardsWarmupTimer.IsFinished())
+			{
+				return Vector2.right * forwardsSpeed;
+			}
+		}
+		if (!forwardsCooldownTimer.IsFinished() && forwardsCooldownTimer.HasStarted())
+		{
+			return Vector2.right * forwardsWarmUpSpeed;
+		}
+
+		return Vector2.zero;
+	}
+
 	public void CollectInput()
 	{
 		if (Keyboard.current != null)
@@ -145,31 +198,41 @@ public class PlayerShipMovementController : MonoBehaviour
 				moveDownWarmupTimer.Reset();
 				moveDownCooldownTimer.ResetAndStart();
 			}
-		}
 
-		if (Keyboard.current[Key.Digit1].isPressed)
-		{
-			Debug.Log("1");
-		}
-		if (Keyboard.current[Key.Digit2].isPressed)
-		{
-			Debug.Log("2");
-		}
-		if (Keyboard.current[Key.Digit3].isPressed)
-		{
-			Debug.Log("3");
-		}
-		if (Keyboard.current[Key.Digit4].isPressed)
-		{
-			Debug.Log("4");
-		}
-		if (Keyboard.current[Key.LeftCtrl].isPressed)
-		{
-			Debug.Log("LeftCtrl");
-		}
-		if (Keyboard.current[Key.Space].isPressed)
-		{
-			Debug.Log("Space");
+			//Left Input
+			if (Keyboard.current[Key.LeftArrow].isPressed && Keyboard.current[Key.LeftArrow].wasPressedThisFrame)
+			{
+				bMoveBackwards = true;
+				backwardsWarmupTimer.ResetAndStart();
+				backwardsCooldownTimer.Reset();
+			}
+			else if (Keyboard.current[Key.LeftArrow].isPressed && !Keyboard.current[Key.LeftArrow].wasPressedThisFrame)
+			{
+			}
+			else if (!Keyboard.current[Key.LeftArrow].isPressed && Keyboard.current[Key.LeftArrow].wasReleasedThisFrame)
+			{
+				bMoveBackwards = false;
+				backwardsWarmupTimer.Reset();
+				backwardsCooldownTimer.ResetAndStart();
+			}
+
+			//Right Input
+			if (Keyboard.current[Key.RightArrow].isPressed && Keyboard.current[Key.RightArrow].wasPressedThisFrame)
+			{
+				bMoveForwards = true;
+				forwardsWarmupTimer.ResetAndStart();
+				forwardsCooldownTimer.Reset();
+			}
+			else if (Keyboard.current[Key.RightArrow].isPressed && !Keyboard.current[Key.RightArrow].wasPressedThisFrame)
+			{
+			}
+			else if (!Keyboard.current[Key.RightArrow].isPressed && Keyboard.current[Key.RightArrow].wasReleasedThisFrame)
+			{
+				bMoveForwards = false;
+				forwardsWarmupTimer.Reset();
+				forwardsCooldownTimer.ResetAndStart();
+			}
+
 		}
 	}
 }
