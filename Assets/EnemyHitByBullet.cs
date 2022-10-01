@@ -22,7 +22,16 @@ public class EnemyHitByBullet : MonoBehaviour
 	{
 		if (collision.gameObject.layer != LayerMask.NameToLayer(LayerConstants.PlayerProjectile)) return;
 
-		Debug.Log("I've been hit!");
+		EnemyHitpointController enemyHitpointController = GetComponent<EnemyHitpointController>();
+		if (enemyHitpointController != null)
+		{
+			//TODO: Make the damage object
+			enemyHitpointController.TakeDamage(1);
+			if ( enemyHitpointController.currentHitpoints <= 0)
+			{
+				Destroy(gameObject);
+			}
+		}
 	}
 }
 

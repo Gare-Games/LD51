@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Assets.classes;
 
 public class BulletConfiguration : MonoBehaviour
 {
@@ -21,9 +22,9 @@ public class BulletConfiguration : MonoBehaviour
 
 	}
 
-	public void Initialize()
+	public void Initialize(Vector2 direction)
 	{
 		if (m_rigidbody2D == null) m_rigidbody2D = GetComponent<Rigidbody2D>();
-		m_rigidbody2D.velocity = Vector2.right * speed;
+		m_rigidbody2D.velocity = direction * speed;
 	}
 }

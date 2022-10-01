@@ -70,6 +70,9 @@ GameObject:
   - component: {fileID: 3336628262069629452}
   - component: {fileID: 1103070447842360866}
   - component: {fileID: 1562930888048130262}
+  - component: {fileID: 8792395032622493650}
+  - component: {fileID: 7531725320022657604}
+  - component: {fileID: 31197386629412921}
   m_Layer: 6
   m_Name: enemyship1
   m_TagString: Untagged
@@ -176,5 +179,45 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 672c307fd61894b4f8efd88774fa4883, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8792395032622493650
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8398335625284725778}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11e1895ff0ec31a478c3aa36d977e52d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 1
+  currentHitpoints: 0
+--- !u!114 &7531725320022657604
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8398335625284725778}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 802271d5c68eeee4099d13c477ac76e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1.5
+  idlingSpeed: 0
+--- !u!114 &31197386629412921
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8398335625284725778}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7827b95d5de43a45a20b85a1a0a71b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

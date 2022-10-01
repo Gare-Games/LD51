@@ -11,6 +11,7 @@ public class PlayerWeapon : MonoBehaviour
 	public bool hasAmmo;
 	public Globals.Direction direction;
 	public GameObject projectileToSpawn;
+	public float bulletVariance = 15.0f;
 
 
 	// Start is called before the first frame update
@@ -36,7 +37,10 @@ public class PlayerWeapon : MonoBehaviour
 			GameObject bulletObj = Instantiate(projectileToSpawn, gameObject.transform.position, Quaternion.identity);
 			BulletConfiguration bulletConfiguration = bulletObj.GetComponent<BulletConfiguration>();
 			if (bulletConfiguration != null)
-				bulletConfiguration.Initialize();
+			{
+				float varianceAngle = Random.Range(-bulletVariance, bulletVariance);
+				bulletConfiguration.Initialize(Globals.rotate(Vector2.right, varianceAngle));
+			}
 
 			shotFrequency.ResetAndStart();
 		}
