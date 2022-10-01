@@ -9,6 +9,8 @@ namespace Assets.classes
 {
 	public class Globals
 	{
+
+		public static GameController GameController;
 		public static Vector2 rotateRadians(Vector2 v, float radians)
 		{
 			return new Vector2(

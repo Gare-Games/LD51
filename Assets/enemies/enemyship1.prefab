@@ -207,7 +207,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 802271d5c68eeee4099d13c477ac76e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1.5
+  speed: 2.5
   idlingSpeed: 0
 --- !u!114 &31197386629412921
 MonoBehaviour:
@@ -221,3 +221,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7827b95d5de43a45a20b85a1a0a71b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  leftBorder: -7.5

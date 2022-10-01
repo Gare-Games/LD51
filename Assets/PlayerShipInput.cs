@@ -3,12 +3,17 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using Assets.classes;
+
 
 public class PlayerShipInput : MonoBehaviour
 {
 
 	bool bAttack1 = false;
 	bool bAttack2 = false;
+
+
+	public GameObject defaultBoat;
 
 
 	// Start is called before the first frame update
@@ -36,6 +41,26 @@ public class PlayerShipInput : MonoBehaviour
 		if (Keyboard.current[Key.X].isPressed)
 		{
 			Debug.Log("Attack2");
+		}
+
+		if (Keyboard.current[Key.Digit1].wasPressedThisFrame)
+		{
+			//Upgrade1
+			Globals.GameController.AddToTopSpawner(defaultBoat);
+		}
+		if (Keyboard.current[Key.Digit2].wasPressedThisFrame)
+		{
+			//Upgrade2
+			Globals.GameController.AddToMidSpawner(defaultBoat);
+		}
+		if (Keyboard.current[Key.Digit3].wasPressedThisFrame)
+		{
+			//Upgrade3
+			Globals.GameController.AddToBottomSpawner(defaultBoat);
+		}
+		if (Keyboard.current[Key.Digit4].wasPressedThisFrame)
+		{
+			// Reroll
 		}
 	}
 

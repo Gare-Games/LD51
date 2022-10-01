@@ -27,8 +27,13 @@ public class EnemyHitByBullet : MonoBehaviour
 		{
 			//TODO: Make the damage object
 			enemyHitpointController.TakeDamage(1);
+
+			//Destroy the bullet.
+			Destroy(collision.gameObject);
+
 			if ( enemyHitpointController.currentHitpoints <= 0)
 			{
+				//Destroy the enemy
 				Destroy(gameObject);
 			}
 		}
