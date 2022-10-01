@@ -42,26 +42,6 @@ public class PlayerShipInput : MonoBehaviour
 		{
 			Debug.Log("Attack2");
 		}
-
-		if (Keyboard.current[Key.Digit1].wasPressedThisFrame)
-		{
-			//Upgrade1
-			Globals.GameController.AddToTopSpawner(defaultBoat);
-		}
-		if (Keyboard.current[Key.Digit2].wasPressedThisFrame)
-		{
-			//Upgrade2
-			Globals.GameController.AddToMidSpawner(defaultBoat);
-		}
-		if (Keyboard.current[Key.Digit3].wasPressedThisFrame)
-		{
-			//Upgrade3
-			Globals.GameController.AddToBottomSpawner(defaultBoat);
-		}
-		if (Keyboard.current[Key.Digit4].wasPressedThisFrame)
-		{
-			// Reroll
-		}
 	}
 
 

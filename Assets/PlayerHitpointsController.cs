@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Assets.classes;
 
 public class PlayerHitpointsController : MonoBehaviour
 {
@@ -12,15 +13,18 @@ public class PlayerHitpointsController : MonoBehaviour
 	void Start()
 	{
 		hitpoints = hitpointMax;
+		Globals.GameController.UpdateHealth(hitpoints);
 	}
 
 	public void HealDamage(int amount)
 	{ 
 		hitpoints = Mathf.Min(hitpoints + amount, hitpointMax);
+		Globals.GameController.UpdateHealth(hitpoints);
 	}
 
 	public void TakeDamage(int amount)
 	{
 		hitpoints = Mathf.Max(hitpoints - amount, 0);
+		Globals.GameController.UpdateHealth(hitpoints);
 	}
 }

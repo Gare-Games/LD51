@@ -21,6 +21,9 @@ public class PlayerHitByShip : MonoBehaviour
 	{
 		if (collision.gameObject.layer != LayerMask.NameToLayer(LayerConstants.Enemy)) return;
 
-		Debug.Log("Hit!");
+		PlayerHitpointsController playerHitpointsController = GetComponent<PlayerHitpointsController>();
+		playerHitpointsController.TakeDamage(1);
+
+		// Some lose condition.
 	}
 }

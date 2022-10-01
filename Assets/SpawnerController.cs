@@ -57,7 +57,7 @@ public class SpawnerController : MonoBehaviour
 	{
 		int row = Random.Range(0, 5) + 1;
 
-		float whenToSpawnSetting = Random.Range(0.1f, 9.9f);
+		float whenToSpawnSetting = Random.Range(0.1f, 9.5f);
 		SpawnerConfig spawnerConfig = new SpawnerConfig() { spawnThisObject = gameObject, whenToSpawn = whenToSpawnSetting };
 
 		switch (row)
