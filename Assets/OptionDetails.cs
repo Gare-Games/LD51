@@ -12,8 +12,6 @@ public class OptionDetails : MonoBehaviour
 	private EnemySpawnConfig enemyToSpawnConfig;
 
 
-
-
 	// Start is called before the first frame update
 	void Start()
 	{

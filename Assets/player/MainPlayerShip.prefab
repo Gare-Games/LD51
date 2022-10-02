@@ -708,6 +708,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitpointMax: 5
   hitpoints: 0
+  damageCooldownTimer:
+    frequency: 0.25
+    timer: 0
 --- !u!114 &352639635733491034
 MonoBehaviour:
   m_ObjectHideFlags: 0
