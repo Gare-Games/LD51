@@ -48,6 +48,7 @@ public class OptionDetails : MonoBehaviour
 
 	public void Select()
 	{
+		Globals.GameController.PlaySelectSound();
 		Globals.GameController.IncrementLevelCount();
 		playerUpgradeConfig.unityEvent.Invoke();
 		enemyUpgradeConfig.unityEvent.Invoke();

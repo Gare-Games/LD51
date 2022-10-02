@@ -11,6 +11,7 @@ namespace Assets.classes
 	{
 
 		public static GameController GameController;
+		public static BackgroundController BackgroundController;
 		public static Vector2 rotateRadians(Vector2 v, float radians)
 		{
 			return new Vector2(

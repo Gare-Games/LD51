@@ -23,6 +23,7 @@ public class ShootOnInterval : MonoBehaviour
 		shotTimer.Interval();
 		if (shotTimer.IsFinished())
 		{
+			Globals.GameController.PlayEnemyShootSound();
 			GameObject bulletObj = Instantiate(projectileToSpawn, gameObject.transform.position, Quaternion.identity);
 			BulletConfiguration bulletConfiguration = bulletObj.GetComponent<BulletConfiguration>();
 			if (bulletConfiguration != null)

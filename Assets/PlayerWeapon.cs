@@ -33,7 +33,8 @@ public class PlayerWeapon : MonoBehaviour
 	{
 		if (!shotFrequency.HasStarted())
 		{
-			// Shoot
+			// Shoot.
+			Globals.GameController.PlayShootSound();
 			GameObject bulletObj = Instantiate(projectileToSpawn, gameObject.transform.position, Quaternion.identity);
 			BulletConfiguration bulletConfiguration = bulletObj.GetComponent<BulletConfiguration>();
 			if (bulletConfiguration != null)

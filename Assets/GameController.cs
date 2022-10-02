@@ -12,6 +12,31 @@ public class GameController : MonoBehaviour
 	public SpawnerController BottomSpawner;
 	public UpgradeSelectorController upgradeSelectorController;
 
+
+	public AudioSource shootSound;
+	public AudioSource selectSound;
+	public AudioSource enemySound;
+	public AudioSource enemyShootSound;
+
+	public void PlayShootSound()
+	{
+		if (!shootSound.isPlaying)
+			shootSound.Play();
+	}
+
+	public void PlaySelectSound()
+	{
+		if (!selectSound.isPlaying)
+			selectSound.Play();
+	}
+
+	public void PlayEnemyShootSound()
+	{
+		if (!enemyShootSound.isPlaying)
+			enemyShootSound.Play();
+	}
+
+
 	public GameObject gameOverWindow;
 
 	public Timer gameTimer;
@@ -126,5 +151,10 @@ public class GameController : MonoBehaviour
 	public void HideGameOver()
 	{
 		gameOverWindow.SetActive(false);
+	}
+
+
+	public void PlaySound(AudioClip audioClip)
+	{
 	}
 }
