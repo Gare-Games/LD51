@@ -27,6 +27,8 @@ public class EnemyHitByBullet : MonoBehaviour
 		{
 			//TODO: Make the damage object
 			enemyHitpointController.TakeDamage(1);
+			OnHitFlash onHitFlash = GetComponent<OnHitFlash>();
+			if (onHitFlash != null) onHitFlash.TriggerFlash();
 
 			//Destroy the bullet.
 			Destroy(collision.gameObject);

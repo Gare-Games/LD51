@@ -862,6 +862,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1259611422, guid: bf81279c99ced114fae19b5b01d6b28d, type: 3}
+      propertyPath: enemySpawnConfigs.Array.data[1].enemyIcon
+      value: 
+      objectReference: {fileID: 21300000, guid: 4b6ed0806e9134c4698d3293e47a8118, type: 3}
+    - target: {fileID: 1259611422, guid: bf81279c99ced114fae19b5b01d6b28d, type: 3}
+      propertyPath: enemySpawnConfigs.Array.data[1].enemyToSpawn
+      value: 
+      objectReference: {fileID: 8398335625284725778, guid: 283920948cd7dcc45bcca0ba5a9fb85e, type: 3}
     - target: {fileID: 917565849900456967, guid: bf81279c99ced114fae19b5b01d6b28d, type: 3}
       propertyPath: spawnerController
       value: 
@@ -918,17 +926,9 @@ PrefabInstance:
       propertyPath: spawnerController
       value: 
       objectReference: {fileID: 640319863}
-    - target: {fileID: 8079097472079341872, guid: bf81279c99ced114fae19b5b01d6b28d, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 8250341946232561873, guid: bf81279c99ced114fae19b5b01d6b28d, type: 3}
       propertyPath: m_Name
       value: UpgradeSelector
-      objectReference: {fileID: 0}
-    - target: {fileID: 8250341946232561873, guid: bf81279c99ced114fae19b5b01d6b28d, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf81279c99ced114fae19b5b01d6b28d, type: 3}

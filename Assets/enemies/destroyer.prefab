@@ -58,6 +58,104 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.47721446, y: 0.18480891}
   m_EdgeRadius: 0
+--- !u!1 &3214175846680490055
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 639774093081639427}
+  - component: {fileID: 1625818720257007326}
+  m_Layer: 6
+  m_Name: TurretRight
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &639774093081639427
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3214175846680490055}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.162, y: 0.04, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7440490280891178069}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1625818720257007326
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3214175846680490055}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ee4df570032b4342bf94b57ed15b1da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shotTimer:
+    frequency: 3
+    timer: 0
+  projectileToSpawn: {fileID: 2075513579428551069, guid: 83104cf0619510b48ad1e6ea28278b97, type: 3}
+  shotVariance: 4.5
+--- !u!1 &6642110535770217583
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7112418250240917464}
+  - component: {fileID: 5403384793877597403}
+  m_Layer: 6
+  m_Name: TurretLeft
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7112418250240917464
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6642110535770217583}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.103, y: 0.04, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7440490280891178069}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5403384793877597403
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6642110535770217583}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ee4df570032b4342bf94b57ed15b1da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shotTimer:
+    frequency: 3
+    timer: 0
+  projectileToSpawn: {fileID: 2075513579428551069, guid: 83104cf0619510b48ad1e6ea28278b97, type: 3}
+  shotVariance: 4.5
 --- !u!1 &8398335625284725778
 GameObject:
   m_ObjectHideFlags: 0
@@ -73,9 +171,9 @@ GameObject:
   - component: {fileID: 8792395032622493650}
   - component: {fileID: 7531725320022657604}
   - component: {fileID: 31197386629412921}
-  - component: {fileID: 6075502525480751240}
+  - component: {fileID: 5643427485860224902}
   m_Layer: 6
-  m_Name: enemyship1
+  m_Name: destroyer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -94,6 +192,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5348268055255470189}
+  - {fileID: 7112418250240917464}
+  - {fileID: 639774093081639427}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -138,7 +238,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 8ecfebf6fea9e124caec87c9073bf28b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4b6ed0806e9134c4698d3293e47a8118, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -194,7 +294,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11e1895ff0ec31a478c3aa36d977e52d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 1
+  maxHealth: 2
   currentHitpoints: 0
 --- !u!114 &7531725320022657604
 MonoBehaviour:
@@ -208,7 +308,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 802271d5c68eeee4099d13c477ac76e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2.5
+  speed: 2.1
   idlingSpeed: 0
 --- !u!114 &31197386629412921
 MonoBehaviour:
@@ -223,7 +323,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   leftBorder: -7.5
---- !u!114 &6075502525480751240
+--- !u!114 &5643427485860224902
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
