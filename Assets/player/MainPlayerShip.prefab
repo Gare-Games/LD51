@@ -46,12 +46,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shotFrequency:
     frequency: 0.5
+    timer: 0
   reloadTimer:
     frequency: 0
+    timer: 0
   maxAmmo: 0
   hasAmmo: 0
   direction: 3
   projectileToSpawn: {fileID: 2075513579428551069, guid: 2c82d12645e26c047be8e8330663668b, type: 3}
+  bulletVariance: 15
 --- !u!1 &5472677080178510275
 GameObject:
   m_ObjectHideFlags: 0
@@ -125,6 +128,7 @@ GameObject:
   - component: {fileID: 1442662557}
   - component: {fileID: 6059037455948781507}
   - component: {fileID: 6083079553410842996}
+  - component: {fileID: 352639635733491034}
   m_Layer: 7
   m_Name: MainPlayerShip
   m_TagString: Player
@@ -234,6 +238,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae65953e16c5b92409325feb9ee28a85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  defaultBoat: {fileID: 0}
 --- !u!114 &1442662557
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -254,20 +259,28 @@ MonoBehaviour:
   backwardsSpeed: 0.5
   moveUpWarmupTimer:
     frequency: 0.5
+    timer: 0
   moveUpCooldownTimer:
     frequency: 0.5
+    timer: 0
   moveDownWarmupTimer:
     frequency: 0.5
+    timer: 0
   moveDownCooldownTimer:
     frequency: 0.5
+    timer: 0
   forwardsWarmupTimer:
     frequency: 0.5
+    timer: 0
   forwardsCooldownTimer:
     frequency: 0.5
+    timer: 0
   backwardsWarmupTimer:
     frequency: 0.5
+    timer: 0
   backwardsCooldownTimer:
     frequency: 0.5
+    timer: 0
 --- !u!114 &6059037455948781507
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -294,3 +307,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitpointMax: 5
   hitpoints: 0
+--- !u!114 &352639635733491034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6910005605186531412}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25a7686ea6198094f99bafafef5504ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprite: {fileID: 914926258369902636}
+  color: {r: 1, g: 1, b: 1, a: 1}

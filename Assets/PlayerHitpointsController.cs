@@ -9,11 +9,27 @@ public class PlayerHitpointsController : MonoBehaviour
 	public int hitpointMax = 5;
 	public int hitpoints = 0;
 
+	bool initialized = false;
+
 	// Start is called before the first frame update
 	void Start()
 	{
 		hitpoints = hitpointMax;
-		Globals.GameController.UpdateHealth(hitpoints);
+		if (Globals.GameController != null)
+		{
+			Globals.GameController.UpdateHealth(hitpoints);
+			initialized = true;
+		}
+		
+	}
+
+	private void Update()
+	{
+		if (!initialized && Globals.GameController != null)
+		{
+			Globals.GameController.UpdateHealth(hitpoints);
+			initialized = true;
+		}
 	}
 
 	public void HealDamage(int amount)
