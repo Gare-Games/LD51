@@ -9,7 +9,7 @@ public class PlayerWeapon : MonoBehaviour
 	public Timer reloadTimer;
 	public int maxAmmo;
 	public bool hasAmmo;
-	public Globals.Direction direction;
+	public Globals.Direction direction = Globals.Direction.right;
 	public GameObject projectileToSpawn;
 	public float bulletVariance = 15.0f;
 
@@ -25,7 +25,7 @@ public class PlayerWeapon : MonoBehaviour
 	{
 		shotFrequency.Interval();
 
-		if(shotFrequency.IsFinished())
+		if (shotFrequency.IsFinished())
 			shotFrequency.Reset();
 	}
 
@@ -39,7 +39,27 @@ public class PlayerWeapon : MonoBehaviour
 			if (bulletConfiguration != null)
 			{
 				float varianceAngle = Random.Range(-bulletVariance, bulletVariance);
-				bulletConfiguration.Initialize(Globals.rotate(Vector2.right, varianceAngle));
+				Vector2 startDirection = Vector2.right;
+				switch (direction)
+				{
+					case Globals.Direction.right:
+						startDirection = Vector2.right;
+						break;
+					case Globals.Direction.upright:
+						startDirection = Globals.rotate(Vector2.right, 15.0f);
+						break;
+					case Globals.Direction.downright:
+						startDirection = Globals.rotate(Vector2.right, -15.0f);
+						break;
+					default:
+						startDirection = Vector2.right;
+						break;
+				}
+
+				Vector2 shotDirection = Globals.rotate(startDirection, varianceAngle);
+
+
+				bulletConfiguration.Initialize(shotDirection);
 			}
 
 			shotFrequency.ResetAndStart();

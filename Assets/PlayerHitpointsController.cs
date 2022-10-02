@@ -34,7 +34,7 @@ public class PlayerHitpointsController : MonoBehaviour
 
 	public void HealDamage(int amount)
 	{ 
-		hitpoints = Mathf.Min(hitpoints + amount, hitpointMax);
+		hitpoints = hitpoints + amount;
 		Globals.GameController.UpdateHealth(hitpoints);
 	}
 

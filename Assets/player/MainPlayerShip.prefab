@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2596617542282287182}
   - component: {fileID: 203783354792883846}
   m_Layer: 0
-  m_Name: WeaponObj
+  m_Name: TurretMid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -54,7 +54,227 @@ MonoBehaviour:
   hasAmmo: 0
   direction: 3
   projectileToSpawn: {fileID: 2075513579428551069, guid: 2c82d12645e26c047be8e8330663668b, type: 3}
-  bulletVariance: 15
+  bulletVariance: 1.5
+--- !u!1 &315876119285586392
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7757223780933683464}
+  - component: {fileID: 8397381445680213951}
+  m_Layer: 0
+  m_Name: TurretTop
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7757223780933683464
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 315876119285586392}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.294, y: 0.168, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8836641387833261622}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8397381445680213951
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 315876119285586392}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7eea2421cd7bfe446a433d8a0c5a2d66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shotFrequency:
+    frequency: 0.5
+    timer: 0
+  reloadTimer:
+    frequency: 0
+    timer: 0
+  maxAmmo: 0
+  hasAmmo: 0
+  direction: 3
+  projectileToSpawn: {fileID: 2075513579428551069, guid: 2c82d12645e26c047be8e8330663668b, type: 3}
+  bulletVariance: 1.5
+--- !u!1 &2128564497218535375
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2007315342264897894}
+  - component: {fileID: 7769774361570417583}
+  m_Layer: 0
+  m_Name: TurretMidTopDiagnal (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2007315342264897894
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2128564497218535375}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.062, y: 0.007, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8836641387833261622}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7769774361570417583
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2128564497218535375}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7eea2421cd7bfe446a433d8a0c5a2d66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shotFrequency:
+    frequency: 0.5
+    timer: 0
+  reloadTimer:
+    frequency: 0
+    timer: 0
+  maxAmmo: 0
+  hasAmmo: 0
+  direction: 4
+  projectileToSpawn: {fileID: 2075513579428551069, guid: 2c82d12645e26c047be8e8330663668b, type: 3}
+  bulletVariance: 3
+--- !u!1 &4010500525488259605
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7645731448262739087}
+  - component: {fileID: 4297236941214288177}
+  m_Layer: 0
+  m_Name: TurretMidBot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7645731448262739087
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4010500525488259605}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.129, y: -0.167, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8836641387833261622}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4297236941214288177
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4010500525488259605}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7eea2421cd7bfe446a433d8a0c5a2d66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shotFrequency:
+    frequency: 0.5
+    timer: 0
+  reloadTimer:
+    frequency: 0
+    timer: 0
+  maxAmmo: 0
+  hasAmmo: 0
+  direction: 3
+  projectileToSpawn: {fileID: 2075513579428551069, guid: 2c82d12645e26c047be8e8330663668b, type: 3}
+  bulletVariance: 1.5
+--- !u!1 &4912873112328659130
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6011233031940862549}
+  - component: {fileID: 5672014970810912204}
+  m_Layer: 0
+  m_Name: TurretMidTopDiagnal (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6011233031940862549
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4912873112328659130}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.013, y: 0.07, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8836641387833261622}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5672014970810912204
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4912873112328659130}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7eea2421cd7bfe446a433d8a0c5a2d66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shotFrequency:
+    frequency: 0.5
+    timer: 0
+  reloadTimer:
+    frequency: 0
+    timer: 0
+  maxAmmo: 0
+  hasAmmo: 0
+  direction: 4
+  projectileToSpawn: {fileID: 2075513579428551069, guid: 2c82d12645e26c047be8e8330663668b, type: 3}
+  bulletVariance: 3
 --- !u!1 &5472677080178510275
 GameObject:
   m_ObjectHideFlags: 0
@@ -113,6 +333,171 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.8073603, y: 0.25420916}
   m_EdgeRadius: 0
+--- !u!1 &6002259353063045395
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6903450555956221001}
+  - component: {fileID: 5889445755044587184}
+  m_Layer: 0
+  m_Name: TurretMidTopDiagnal
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6903450555956221001
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6002259353063045395}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.138, y: -0.015, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8836641387833261622}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5889445755044587184
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6002259353063045395}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7eea2421cd7bfe446a433d8a0c5a2d66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shotFrequency:
+    frequency: 0.5
+    timer: 0
+  reloadTimer:
+    frequency: 0
+    timer: 0
+  maxAmmo: 0
+  hasAmmo: 0
+  direction: 4
+  projectileToSpawn: {fileID: 2075513579428551069, guid: 2c82d12645e26c047be8e8330663668b, type: 3}
+  bulletVariance: 1.5
+--- !u!1 &6118284953312821920
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8100772139830213049}
+  - component: {fileID: 8651549451490277059}
+  m_Layer: 0
+  m_Name: TurretBot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8100772139830213049
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6118284953312821920}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.294, y: -0.279, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8836641387833261622}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8651549451490277059
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6118284953312821920}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7eea2421cd7bfe446a433d8a0c5a2d66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shotFrequency:
+    frequency: 0.5
+    timer: 0
+  reloadTimer:
+    frequency: 0
+    timer: 0
+  maxAmmo: 0
+  hasAmmo: 0
+  direction: 3
+  projectileToSpawn: {fileID: 2075513579428551069, guid: 2c82d12645e26c047be8e8330663668b, type: 3}
+  bulletVariance: 1.5
+--- !u!1 &6280333972585777944
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2547415678026826548}
+  - component: {fileID: 7989902228168675505}
+  m_Layer: 0
+  m_Name: TurretMidBotDiagnal (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2547415678026826548
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6280333972585777944}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.014, y: -0.18, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8836641387833261622}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7989902228168675505
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6280333972585777944}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7eea2421cd7bfe446a433d8a0c5a2d66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shotFrequency:
+    frequency: 0.5
+    timer: 0
+  reloadTimer:
+    frequency: 0
+    timer: 0
+  maxAmmo: 0
+  hasAmmo: 0
+  direction: 7
+  projectileToSpawn: {fileID: 2075513579428551069, guid: 2c82d12645e26c047be8e8330663668b, type: 3}
+  bulletVariance: 3
 --- !u!1 &6910005605186531412
 GameObject:
   m_ObjectHideFlags: 0
@@ -150,6 +535,16 @@ Transform:
   m_Children:
   - {fileID: 8496997857723748244}
   - {fileID: 2596617542282287182}
+  - {fileID: 7757223780933683464}
+  - {fileID: 8100772139830213049}
+  - {fileID: 7645731448262739087}
+  - {fileID: 2678413782291892238}
+  - {fileID: 6903450555956221001}
+  - {fileID: 1977771849904620476}
+  - {fileID: 6011233031940862549}
+  - {fileID: 2547415678026826548}
+  - {fileID: 2007315342264897894}
+  - {fileID: 6700669375542583865}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -321,3 +716,168 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sprite: {fileID: 914926258369902636}
   color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!1 &7510717830073188694
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6700669375542583865}
+  - component: {fileID: 3311627887727271645}
+  m_Layer: 0
+  m_Name: TurretMidBotDiagnal (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6700669375542583865
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7510717830073188694}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.058, y: -0.14, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8836641387833261622}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3311627887727271645
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7510717830073188694}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7eea2421cd7bfe446a433d8a0c5a2d66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shotFrequency:
+    frequency: 0.5
+    timer: 0
+  reloadTimer:
+    frequency: 0
+    timer: 0
+  maxAmmo: 0
+  hasAmmo: 0
+  direction: 7
+  projectileToSpawn: {fileID: 2075513579428551069, guid: 2c82d12645e26c047be8e8330663668b, type: 3}
+  bulletVariance: 3
+--- !u!1 &8361822581538902386
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2678413782291892238}
+  - component: {fileID: 5397586393673834708}
+  m_Layer: 0
+  m_Name: TurretMidTop
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2678413782291892238
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8361822581538902386}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.138, y: -0.015, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8836641387833261622}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5397586393673834708
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8361822581538902386}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7eea2421cd7bfe446a433d8a0c5a2d66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shotFrequency:
+    frequency: 0.5
+    timer: 0
+  reloadTimer:
+    frequency: 0
+    timer: 0
+  maxAmmo: 0
+  hasAmmo: 0
+  direction: 3
+  projectileToSpawn: {fileID: 2075513579428551069, guid: 2c82d12645e26c047be8e8330663668b, type: 3}
+  bulletVariance: 1.5
+--- !u!1 &8833006841904263552
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1977771849904620476}
+  - component: {fileID: 231072393147276937}
+  m_Layer: 0
+  m_Name: TurretMidBotDiagnal
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1977771849904620476
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8833006841904263552}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.129, y: -0.167, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8836641387833261622}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &231072393147276937
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8833006841904263552}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7eea2421cd7bfe446a433d8a0c5a2d66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shotFrequency:
+    frequency: 0.5
+    timer: 0
+  reloadTimer:
+    frequency: 0
+    timer: 0
+  maxAmmo: 0
+  hasAmmo: 0
+  direction: 7
+  projectileToSpawn: {fileID: 2075513579428551069, guid: 2c82d12645e26c047be8e8330663668b, type: 3}
+  bulletVariance: 1.5
