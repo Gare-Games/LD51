@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Assets.classes;
 
 public class OptionDetails : MonoBehaviour
 {
@@ -47,8 +48,12 @@ public class OptionDetails : MonoBehaviour
 
 	public void Select()
 	{
+		Globals.GameController.IncrementLevelCount();
 		playerUpgradeConfig.unityEvent.Invoke();
 		enemyUpgradeConfig.unityEvent.Invoke();
-		spawnerController.Add(enemyToSpawnConfig.enemyToSpawn);
+
+		for(int i = 0; i < enemyToSpawnConfig.amount; i++)
+			spawnerController.Add(enemyToSpawnConfig.enemyToSpawn);
+		
 	}
 }

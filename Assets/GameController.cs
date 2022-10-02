@@ -12,10 +12,15 @@ public class GameController : MonoBehaviour
 	public SpawnerController BottomSpawner;
 	public UpgradeSelectorController upgradeSelectorController;
 
+	public GameObject gameOverWindow;
+
 	public Timer gameTimer;
 
 	public TMP_Text tenSecondTimer;
 	public TMP_Text hitpointsText;
+	public TMP_Text levelCountText;
+
+	public int levelCount = 1;
 
 	// Start is called before the first frame update
 	void Start()
@@ -102,5 +107,24 @@ public class GameController : MonoBehaviour
 	{
 		if (hitpointsText != null)
 			hitpointsText.SetText($"HP: {health}");
+	}
+
+	public void IncrementLevelCount()
+	{
+		levelCount++;
+		if (levelCountText != null)
+			levelCountText.SetText($"LEVEL: {levelCount}");
+	}
+
+	public void ShowGameOver()
+	{
+		gameOverWindow.SetActive(true);
+		upgradeSelectorController.HideUpgradeList();
+		gameTimer.Stop();
+	}
+
+	public void HideGameOver()
+	{
+		gameOverWindow.SetActive(false);
 	}
 }

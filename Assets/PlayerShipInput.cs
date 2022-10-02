@@ -48,6 +48,10 @@ public class PlayerShipInput : MonoBehaviour
 	public void TriggerWeapons()
 	{
 		List<PlayerWeapon> playerWeapons = GetComponentsInChildren<PlayerWeapon>().ToList();
-		playerWeapons.ForEach(weapon => weapon.TriggerWeapon());
+		playerWeapons.ForEach(weapon =>
+		{
+			if (weapon.enabled) 
+				weapon.TriggerWeapon();
+		});
 	}
 }

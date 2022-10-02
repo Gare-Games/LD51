@@ -94,7 +94,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 315876119285586392}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7eea2421cd7bfe446a433d8a0c5a2d66, type: 3}
   m_Name: 
@@ -149,7 +149,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2128564497218535375}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7eea2421cd7bfe446a433d8a0c5a2d66, type: 3}
   m_Name: 
@@ -204,7 +204,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4010500525488259605}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7eea2421cd7bfe446a433d8a0c5a2d66, type: 3}
   m_Name: 
@@ -259,7 +259,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4912873112328659130}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7eea2421cd7bfe446a433d8a0c5a2d66, type: 3}
   m_Name: 
@@ -372,7 +372,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6002259353063045395}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7eea2421cd7bfe446a433d8a0c5a2d66, type: 3}
   m_Name: 
@@ -427,7 +427,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6118284953312821920}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7eea2421cd7bfe446a433d8a0c5a2d66, type: 3}
   m_Name: 
@@ -482,7 +482,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6280333972585777944}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7eea2421cd7bfe446a433d8a0c5a2d66, type: 3}
   m_Name: 
@@ -514,6 +514,7 @@ GameObject:
   - component: {fileID: 6059037455948781507}
   - component: {fileID: 6083079553410842996}
   - component: {fileID: 352639635733491034}
+  - component: {fileID: 4739785600264556411}
   m_Layer: 7
   m_Name: MainPlayerShip
   m_TagString: Player
@@ -646,6 +647,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9540b5339b9c7542b6c876a0ab4f768, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxSpeedUpgradeCnt: 3
+  maxHandlingUpgradeCnt: 8
+  currentSpeedUpgrade: 0
+  currentHandlingUpgrade: 0
   verticalWarmUpSpeed: 0.25
   verticalSpeed: 0.75
   forwardsWarmUpSpeed: 0.25
@@ -716,6 +721,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sprite: {fileID: 914926258369902636}
   color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!114 &4739785600264556411
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6910005605186531412}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fa5fad2f0ae96c4d845b002362a65fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7510717830073188694
 GameObject:
   m_ObjectHideFlags: 0
@@ -755,7 +772,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7510717830073188694}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7eea2421cd7bfe446a433d8a0c5a2d66, type: 3}
   m_Name: 
@@ -810,7 +827,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8361822581538902386}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7eea2421cd7bfe446a433d8a0c5a2d66, type: 3}
   m_Name: 
@@ -865,7 +882,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8833006841904263552}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7eea2421cd7bfe446a433d8a0c5a2d66, type: 3}
   m_Name: 

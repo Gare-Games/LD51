@@ -24,6 +24,13 @@ public class PlayerHitByShip : MonoBehaviour
 		PlayerHitpointsController playerHitpointsController = GetComponent<PlayerHitpointsController>();
 		playerHitpointsController.TakeDamage(1);
 
+		if (playerHitpointsController.hitpoints <= 0)
+		{
+			Globals.GameController.ShowGameOver();
+			Destroy(gameObject);
+		}
+			
+
 		OnHitFlash onHitFlash = GetComponent<OnHitFlash>();
 		if (onHitFlash != null)
 			onHitFlash.TriggerFlash();

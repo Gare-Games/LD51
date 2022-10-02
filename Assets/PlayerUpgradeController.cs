@@ -2,11 +2,30 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using System.Linq;
 
 public class PlayerUpgradeController : MonoBehaviour
 {
 	public List<UpgradeConfig> upgradeConfigs;
 
+	public int maxBulletUpgrades = 10;
+	public int currentBulletUpgrades = 0;
+
+	public void AddBulletUpgrade()
+	{
+		currentBulletUpgrades++;
+
+		GameObject player = GameObject.FindGameObjectWithTag("Player");
+		List<PlayerWeapon> playerWeapons = player.GetComponentsInChildren<PlayerWeapon>().ToList();
+		PlayerWeapon playerWeaponToEnable = playerWeapons.FirstOrDefault(weapon => weapon.enabled == false);
+		if (playerWeaponToEnable != null)
+			playerWeaponToEnable.enabled = true;
+
+		if (currentBulletUpgrades >= maxBulletUpgrades)
+		{
+			RemoveUpgradeConfig("bulletSplit");
+		}
+	}
 
 
 	// Start is called before the first frame update
@@ -45,6 +64,22 @@ public class PlayerUpgradeController : MonoBehaviour
 	public void IncreasebulletCount()
 	{
 		Debug.Log("Bullet Count Increased");
+	}
+
+	public void RemoveUpgradeConfig(string spriteName)
+	{
+		UpgradeConfig configToRemove = new UpgradeConfig();
+
+		foreach (var config in upgradeConfigs)
+		{
+			if (config.upgradeIcon.name == spriteName)
+				configToRemove = config;
+		}
+
+		if (configToRemove.upgradeIcon != null)
+		{
+			upgradeConfigs.Remove(configToRemove);
+		}
 	}
 }
 

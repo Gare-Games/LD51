@@ -24,4 +24,5 @@ public class EnemySpawnConfig
 {
 	public Sprite enemyIcon;
 	public GameObject enemyToSpawn;
+	public int amount;
 }

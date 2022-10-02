@@ -2,9 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using Assets.classes;
 
 public class PlayerShipMovementController : MonoBehaviour
 {
+
+	public int maxSpeedUpgradeCnt = 3;
+	public int maxHandlingUpgradeCnt = 8;
+
+	public int currentSpeedUpgrade = 0;
+	public int currentHandlingUpgrade = 0;
+
 	bool bMoveUp = false;
 	bool bMoveUpStarted = false;
 	bool bMoveUpEnded = false;
@@ -62,7 +70,7 @@ public class PlayerShipMovementController : MonoBehaviour
 		backwardsWarmupTimer.Interval();
 		backwardsCooldownTimer.Interval();
 
-	CollectInput();
+		CollectInput();
 
 		DoAction();
 	}
@@ -233,6 +241,46 @@ public class PlayerShipMovementController : MonoBehaviour
 				forwardsCooldownTimer.ResetAndStart();
 			}
 
+		}
+	}
+
+	public void UpgradeSpeed()
+	{
+		currentSpeedUpgrade++;
+
+		verticalSpeed += 0.45f;
+		verticalWarmUpSpeed += 0.15f;
+
+		forwardsSpeed += 0.45f;
+		forwardsWarmUpSpeed += 0.15f;
+
+		backwardsSpeed += 0.15f;
+		backwardsWarmUpSpeed += 0.09f;
+
+		if (currentSpeedUpgrade >= maxSpeedUpgradeCnt)
+		{
+			//REMOVE speed upgrade from cards.
+			Globals.GameController.upgradeSelectorController.playerUpgradeController.RemoveUpgradeConfig("movespeed");
+		}
+	}
+
+	public void UpgradeHandling()
+	{
+		currentHandlingUpgrade++;
+
+		moveUpWarmupTimer.frequency -= 0.05f;
+		moveUpCooldownTimer.frequency -= 0.05f;
+		moveDownWarmupTimer.frequency -= 0.05f;
+		moveDownCooldownTimer.frequency -= 0.05f;
+		forwardsWarmupTimer.frequency -= 0.05f;
+		forwardsCooldownTimer.frequency -= 0.05f;
+		backwardsWarmupTimer.frequency -= 0.05f;
+		backwardsCooldownTimer.frequency -= 0.05f;
+
+		if (currentHandlingUpgrade >= maxHandlingUpgradeCnt)
+		{
+			// Remove handling from upgrade list when max reached.
+			Globals.GameController.upgradeSelectorController.playerUpgradeController.RemoveUpgradeConfig("shipwheel");
 		}
 	}
 }

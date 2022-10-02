@@ -15,7 +15,6 @@ public class UpgradeSelectorController : MonoBehaviour
 	public SpawnableEnemiesList spawnableEnemiesList;
 
 	public GameObject pickAnUpgrade;
-
 	public bool bShowUpgrade = false;
 
 
