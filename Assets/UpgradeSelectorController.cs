@@ -16,6 +16,8 @@ public class UpgradeSelectorController : MonoBehaviour
 
 	public GameObject pickAnUpgrade;
 
+	public bool bShowUpgrade = false;
+
 
 
 	void Start()
@@ -26,7 +28,12 @@ public class UpgradeSelectorController : MonoBehaviour
 	// Update is called once per frame
 	void Update()
 	{
-
+		if (bShowUpgrade)
+		{
+			GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
+			if (enemies.Length == 0)
+				pickAnUpgrade.SetActive(true);
+		}
 	}
 
 	public void RefreshUpgradeList()
@@ -57,7 +64,7 @@ public class UpgradeSelectorController : MonoBehaviour
 		option1.gameObject.SetActive(true);
 		option2.gameObject.SetActive(true);
 		option3.gameObject.SetActive(true);
-		pickAnUpgrade.SetActive(true);
+		bShowUpgrade = true;
 	}
 
 	public void HideUpgradeList()
@@ -66,5 +73,6 @@ public class UpgradeSelectorController : MonoBehaviour
 		option2.gameObject.SetActive(false);
 		option3.gameObject.SetActive(false);
 		pickAnUpgrade.SetActive(false);
+		bShowUpgrade = false;
 	}
 }
