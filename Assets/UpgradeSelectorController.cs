@@ -11,7 +11,6 @@ public class UpgradeSelectorController : MonoBehaviour
 	public OptionDetails option3;
 
 	public PlayerUpgradeController playerUpgradeController;
-	public EnemyUpgradeController enemyUpgradeController;
 	public SpawnableEnemiesList spawnableEnemiesList;
 
 	public GameObject pickAnUpgrade;
@@ -38,7 +37,6 @@ public class UpgradeSelectorController : MonoBehaviour
 	public void RefreshUpgradeList()
 	{
 		List<UpgradeConfig> upgradeConfigs = playerUpgradeController.upgradeConfigs;
-		List<UpgradeConfig> enemyUpgradeConfigs = enemyUpgradeController.enemyUpgradeConfigs;
 		List<EnemySpawnConfig> enemyToSpawnConfigs = spawnableEnemiesList.enemySpawnConfigs;
 
 
@@ -46,11 +44,6 @@ public class UpgradeSelectorController : MonoBehaviour
 		option1.SetPlayerUpgradeConfig(upgradeConfigs[Random.Range(0, upgradeConfigs.Count)]);
 		option2.SetPlayerUpgradeConfig(upgradeConfigs[Random.Range(0, upgradeConfigs.Count)]);
 		option3.SetPlayerUpgradeConfig(upgradeConfigs[Random.Range(0, upgradeConfigs.Count)]);
-
-		//Enemy Upgrades
-		option1.SetEnemyUpgradeConfig(enemyUpgradeConfigs[Random.Range(0, enemyUpgradeConfigs.Count)]);
-		option2.SetEnemyUpgradeConfig(enemyUpgradeConfigs[Random.Range(0, enemyUpgradeConfigs.Count)]);
-		option3.SetEnemyUpgradeConfig(enemyUpgradeConfigs[Random.Range(0, enemyUpgradeConfigs.Count)]);
 
 		//Enemy To Spawn
 		option1.SetEnemyToSpawnConfig(enemyToSpawnConfigs[Random.Range(0, enemyToSpawnConfigs.Count)]);
